@@ -1,5 +1,4 @@
-import './App.css';
-import * as React from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -14,21 +13,18 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import MusicOffIcon from '@mui/icons-material/MusicOff';
-import ToggleIcon from "material-ui-toggle-icon";
 
 const pages = ['About', 'Experiences', 'Projects', 'contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const ResponsiveAppBar = () => {
-  const [musicStatus, setMusicStatus] = React.useState<boolean>(true);
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+const TopBar = () => {
+  const [musicStatus, setMusicStatus] = useState<boolean>(true);
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
   const toggleMusic = (event: React.MouseEvent<HTMLElement>) => {
-    console.log("asd");
+    setMusicStatus(!musicStatus);
   };
 
   const handleCloseNavMenu = () => {
@@ -106,21 +102,13 @@ const ResponsiveAppBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <IconButton onClick={() => setMusicStatus(!musicStatus)}>
-              <ToggleIcon
-                on={musicStatus}
-                onIcon={<MusicNoteIcon />}
-                offIcon={<MusicOffIcon />}
-              />
-            </IconButton>;
-              {/* <IconButton onClick={toggleMusic} sx={{ p: 0 }}>
-                <MusicNoteIcon></MusicNoteIcon>
-              </IconButton> */}
+            <IconButton onClick={toggleMusic} sx={{ p: 0 }}>
+              {musicStatus ? <MusicNoteIcon /> : <MusicOffIcon /> }
+            </IconButton>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
   );
 };
-export default ResponsiveAppBar;
-
+export default TopBar
