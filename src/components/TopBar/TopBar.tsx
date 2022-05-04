@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import MusicOffIcon from '@mui/icons-material/MusicOff';
+import Link from '@mui/material/Link';
 
 const pages = ['About', 'Experiences', 'Projects', 'contact'];
 
@@ -33,7 +34,7 @@ const TopBar = () => {
 
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -77,10 +78,15 @@ const TopBar = () => {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
+                  
                 </MenuItem>
               ))}
+              
             </Menu>
           </Box>
+          <div>
+      
+    </div>
           <Typography
             variant="h6"
             noWrap
@@ -91,13 +97,17 @@ const TopBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
+              // <Button
+              //   key={page}
+              //   onClick={handleCloseNavMenu}
+              //   sx={{ my: 2, color: 'white', display: 'block' }}
+              // >
+              //   {page}
+              // </Button>
+              <Link href="#abc" >
+        Link
+      </Link>
+              
             ))}
           </Box>
 
