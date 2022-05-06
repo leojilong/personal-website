@@ -10,7 +10,9 @@ import { Paper } from "@mui/material";
 
 const Skills = () => {
    return (
-    <Grid container sx={{ bgcolor: '#cfe8fc', height: '100vh' }}>
+    <Grid container 
+    sx={{  height: '100vh' }}
+    >
         <Grid item xs={12} >
             <Paper variant="outlined" sx={{ bgcolor: '#100080', height: '95%' }}/>
         </Grid>

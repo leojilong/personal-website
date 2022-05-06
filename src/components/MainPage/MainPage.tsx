@@ -13,11 +13,14 @@ const MainPage = () => {
     <TopBar/>
     
     <Container maxWidth="lg" style={{ marginTop: 30 }}>
-      <Grid container sx={{ bgcolor: '#cfe8fc', height: '150vh' }} 
+      <Grid container 
+      // sx={{ bgcolor: '#cfe8fc', height: '150vh' }} 
             rowSpacing={1} 
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={12} >
+            <div id="About">
             <MyDivider text="About Me"/>
+            </div>
           </Grid>
           <Grid item xs={12} sm={6}>
             <AboutMe />
@@ -26,13 +29,15 @@ const MainPage = () => {
             <Skills />
           </Grid>
           <Grid item xs={12} >
+            <div id="Experiences">
             <MyDivider text="Experiences"/>
+            </div>
           </Grid>
           <Grid item xs={12} >
             <Experiences/>
           </Grid>
           <Grid item xs={12} >
-            <div id="abc">
+            <div id="Projects">
             <MyDivider text="Projects" />
             </div>
           </Grid>

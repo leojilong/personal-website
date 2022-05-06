@@ -14,6 +14,27 @@ import MenuItem from '@mui/material/MenuItem';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import MusicOffIcon from '@mui/icons-material/MusicOff';
 import Link from '@mui/material/Link';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { COLORS } from '../../style/colors';
+import CssBaseline from '@mui/material/CssBaseline';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: COLORS.orange,
+    },
+    secondary: {
+      main: '#edf2ff',
+    },
+    background: {
+      default: COLORS.bg,
+    },
+    text: {
+      primary: COLORS.orange,
+     
+    },
+  },
+});
 
 const pages = ['About', 'Experiences', 'Projects', 'contact'];
 
@@ -32,12 +53,21 @@ const TopBar = () => {
     setAnchorElNav(null);
   };
 
+  const handleAnchor = (id: string) => {
+    const top = document!.getElementById(id)!.offsetTop;
+    if (top) {
+      window.scrollTo(0, top);
+    }
+  }
 
   return (
+    <ThemeProvider theme={theme}>
+       <CssBaseline />
     <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
+            color='textPrimary'
             variant="h6"
             noWrap
             component="div"
@@ -97,28 +127,30 @@ const TopBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              // <Button
-              //   key={page}
-              //   onClick={handleCloseNavMenu}
-              //   sx={{ my: 2, color: 'white', display: 'block' }}
-              // >
-              //   {page}
-              // </Button>
-              <Link href="#abc" >
-        Link
-      </Link>
+              <Button
+                key={page}
+                onClick={() => handleAnchor(page)}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                {page}
+                {/* <Link href= style={{color: 'white'}}>
+                  {page}
+                </Link> */}
+              </Button>
+              
               
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <IconButton onClick={toggleMusic} sx={{ p: 0 }}>
               {musicStatus ? <MusicNoteIcon /> : <MusicOffIcon /> }
             </IconButton>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>
+    </ThemeProvider>
   );
 };
 export default TopBar
