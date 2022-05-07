@@ -14,10 +14,10 @@ const Skills = () => {
     sx={{  height: '100vh' }}
     >
         <Grid item xs={12} >
-            <Paper variant="outlined" sx={{ bgcolor: '#100080', height: '95%' }}/>
+            <Box  sx={{ height: '95%' }}/>
         </Grid>
         <Grid item xs={12} >
-            <Paper variant="outlined" sx={{ bgcolor: '#200080', height: '95%' }}/>
+            <Box  sx={{ height: '95%' }}/>
         </Grid>
     </Grid>
     

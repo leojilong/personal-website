@@ -14,27 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import MusicOffIcon from '@mui/icons-material/MusicOff';
 import Link from '@mui/material/Link';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { COLORS } from '../../style/colors';
-import CssBaseline from '@mui/material/CssBaseline';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: COLORS.orange,
-    },
-    secondary: {
-      main: '#edf2ff',
-    },
-    background: {
-      default: COLORS.bg,
-    },
-    text: {
-      primary: COLORS.orange,
-     
-    },
-  },
-});
 
 const pages = ['About', 'Experiences', 'Projects', 'contact'];
 
@@ -61,8 +41,7 @@ const TopBar = () => {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-       <CssBaseline />
+    
     <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -106,9 +85,10 @@ const TopBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                  
+                <MenuItem key={page} 
+                onClick={handleCloseNavMenu} 
+                >
+                  <Typography color='textPrimary'textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
               
@@ -150,7 +130,7 @@ const TopBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
-    </ThemeProvider>
+    
   );
 };
 export default TopBar
