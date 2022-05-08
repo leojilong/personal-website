@@ -9,18 +9,18 @@ import { Paper } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import MyDivider from '../MyDivider/MyDivider';
 import { COLORS } from '../../style/colors';
-
+import { Link } from '@mui/material';
+// import '../../style/globalClass.css';
+import './AboutMe.css'
 const AboutMe = () => {
  
-
+const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
 const selfIntro = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 
   return (
-    <Box  sx={{ height: '95%' }}>
-      <Typography
-            color="text"
-          >
-            {selfIntro}
+    <Box sx={{ display: 'flex', height: '95%' }} onClick={preventDefault}>
+      <Typography>
+      {selfIntro}
       </Typography>
     </Box>
     

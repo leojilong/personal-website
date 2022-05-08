@@ -3,6 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { COLORS } from '../../style/colors';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -37,9 +38,12 @@ function a11yProps(index: number) {
   };
 }
 
+
 const Experiences = () => {
   const [value, setValue] = React.useState(0);
-
+  function getStyle (index: number) {
+    return index === value ? {color: COLORS.dark} : {color: COLORS.text}
+  }
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
@@ -48,10 +52,14 @@ const Experiences = () => {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+        <Tabs value={value} 
+        onChange={handleChange} 
+        aria-label="basic tabs example"
+        indicatorColor="secondary"
+        >
+          <Tab label="Item One" {...a11yProps(0)} style={getStyle(0)}/>
+          <Tab label="Item Two" {...a11yProps(1)} style={getStyle(1)}/>
+          <Tab label="Item Three" {...a11yProps(2)} style={getStyle(2)}/>
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>

@@ -6,38 +6,10 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Skills from '../Skills/Skills';
 import Project from '../Project/Project';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { COLORS } from '../../style/colors';
+import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { theme } from '../../style/theme';
 
-const theme = createTheme({
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: {
-        body: {
-          background: COLORS.bg,
-        },
-      },
-    },
-    MuiDivider: {
-      styleOverrides: {
-        
-      },
-    },
-  },
-  palette: {
-    primary: {
-      main: COLORS.bold,
-    },
-    secondary: {
-      main: '#edf2ff',
-    },
-    text: {
-      primary: COLORS.text,
-    },
-  },
-  
-});
 
 const MainPage = () => {
 
