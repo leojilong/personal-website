@@ -10,18 +10,9 @@ import CloudTags from "./CloudTags/CloudTags";
 
 const Skills = () => {
    return (
-    <Grid container 
-    sx={{  height: '100vh' }}
-    >
-        <Grid item xs={12} >
-            <Box  sx={{ height: '95%' }}>
+    <Box sx={{ display: 'flex' }}>
                 <CloudTags/>
             </Box>
-        </Grid>
-        <Grid item xs={12} >
-            <Box  sx={{ height: '95%' }}/>
-        </Grid>
-    </Grid>
     
   );
 };
