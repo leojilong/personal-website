@@ -35,9 +35,9 @@ const MainPage = () => {
             <Skills />
           </Grid>
           <Grid item xs={12} >
-            <div id="Experiences">
+            {/* <div id="Experiences"> */}
             <MyDivider text="Experiences"/>
-            </div>
+            {/* </div> */}
           </Grid>
           <Grid item xs={12} >
             <Experiences/>
