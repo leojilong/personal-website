@@ -9,7 +9,7 @@ import Project from '../Project/Project';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from '../../style/theme';
-
+import Contact from '../Contact/Contact';
 
 const MainPage = () => {
 
@@ -61,6 +61,14 @@ const MainPage = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <Project title="tt" content="asd"/>
+          </Grid>
+          <Grid item xs={12} >
+            <div id="Contacts">
+            <MyDivider text="Contact Me" />
+            </div>
+          </Grid>
+          <Grid item xs={12} >
+            <Contact/>
           </Grid>
       </Grid>
         

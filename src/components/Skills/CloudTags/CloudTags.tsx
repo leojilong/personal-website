@@ -6,7 +6,8 @@ import { siJava, siJavascript, siPython, siHtml5, siCss3,
     siVuedotjs, siNodedotjs, siIonic, siSass, siLodash, 
     siApachemaven, siSpringboot, siNpm, siYarn, siGit, 
     siCapacitor, siPostman, siApacheant, siRacket, siHaskell, 
-    siAntdesign, siMui, siHeroku, siAmazonaws } from "simple-icons/icons"
+    siAntdesign, siMui, siHeroku, siAmazonaws, siSequelize, siMysql,
+    siRedis, siSocketdotio } from "simple-icons/icons"
 
 const js = {name: siJavascript, url: 'https://www.javascript.com/'}
 const java = {name: siJava, url: 'https://www.oracle.com/ca-en/java/'}
@@ -37,10 +38,15 @@ const antd = {name: siAntdesign, url: 'https://ant.design/'}
 const mui = {name: siMui, url: 'https://mui.com/'}
 const heroku = {name: siHeroku, url: 'heroku.com'}
 const aws = {name: siAmazonaws, url: 'https://aws.amazon.com/?nc1=h_ls'}
+const sqlize = {name: siSequelize, url: 'https://sequelize.org/'}
+const mysql = {name: siMysql, url: 'https://www.mysql.com/'}
+const redis = {name: siRedis, url: 'https://redis.io/'}
+const socketio = {name: siSocketdotio, url: 'https://socket.io/'}
 
 const skills = [js, java, python, html, css, ts, psql, mdb, 
     rct, red, vue, node, ionic, sass, lodash, maven, sb, npm, 
-    yarn, git, cap, postm, ant, rkt, hsk, antd, mui, heroku, aws]
+    yarn, git, cap, postm, ant, rkt, hsk, antd, mui, heroku, 
+    aws, sqlize, mysql, redis, socketio]
 const handleClickTags = (e: any, url: any) => {
     // e.preventDefault()
     window.open(url, "_blank")

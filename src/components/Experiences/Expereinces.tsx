@@ -4,6 +4,8 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { COLORS } from '../../style/colors';
+import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -57,13 +59,19 @@ const Experiences = () => {
         aria-label="basic tabs example"
         indicatorColor="secondary"
         >
-          <Tab label="Item One" {...a11yProps(0)} style={getStyle(0)}/>
-          <Tab label="Item Two" {...a11yProps(1)} style={getStyle(1)}/>
-          <Tab label="Item Three" {...a11yProps(2)} style={getStyle(2)}/>
+          <Tab label="U of T" {...a11yProps(0)} style={getStyle(0)}/>
+          <Tab label="Huya" {...a11yProps(1)} style={getStyle(1)}/>
+          <Tab label="Centivizer" {...a11yProps(2)} style={getStyle(2)}/>
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
+      
+        <Link href="https://www.utoronto.ca/" underline="hover" color={COLORS.dark}>
+          <Typography variant="h4">University of Toronto</Typography>
+        </Link>
+        <Typography color={COLORS.dark}>Sep 2018 - Dec 2022</Typography>
         {selfIntro}
+        
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
