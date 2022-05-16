@@ -16,7 +16,7 @@ import MusicOffIcon from '@mui/icons-material/MusicOff';
 import Link from '@mui/material/Link';
 
 
-const pages = ['About', 'Experiences', 'Projects', 'contact'];
+const pages = ['About', 'Experiences', 'Projects', 'Contact'];
 
 const TopBar = () => {
   const [musicStatus, setMusicStatus] = useState<boolean>(true);
@@ -34,9 +34,11 @@ const TopBar = () => {
   };
 
   const handleAnchor = (id: string) => {
-    const top = document!.getElementById(id)!.offsetTop;
+    const top = document!.getElementById(id);
     if (top) {
-      window.scrollTo(0, top);
+      // window.scrollTo(0, top);
+      top.scrollIntoView({ behavior: 'smooth', block: 'center',
+      inline: 'center' })
     }
   }
 

@@ -13,9 +13,18 @@ import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import IconButton from '@mui/material/IconButton';
+import { Fade } from '@mui/material';
+import VizSensor from 'react-visibility-sensor';
 const Contact = () => {
- 
+  const [visible, setVisible] = useState(false);
   return (
+    <VizSensor
+    partialVisibility
+    onChange={(isVisible: any) => {
+        setVisible(isVisible);
+    }}
+        >
+    <Fade in={visible} timeout={1000}>
     <Box sx={{ display: 'flex',
     justifyContent: 'center' }} style={{ marginBottom: 30 }} >
       <IconButton href="mailto:longjileo@gmail.com" color="secondary">
@@ -28,7 +37,8 @@ const Contact = () => {
         <LinkedInIcon />
       </IconButton>
     </Box>
-
+    </Fade>
+    </VizSensor>
     
     
   );

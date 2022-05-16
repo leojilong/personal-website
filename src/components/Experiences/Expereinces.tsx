@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
@@ -6,6 +6,8 @@ import Box from '@mui/material/Box';
 import { COLORS } from '../../style/colors';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
+import { Fade } from '@mui/material';
+import VizSensor from 'react-visibility-sensor';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -15,7 +17,6 @@ interface TabPanelProps {
 
 function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -43,6 +44,7 @@ function a11yProps(index: number) {
 
 const Experiences = () => {
   const [value, setValue] = React.useState(0);
+  const [visible, setVisible] = useState(false);
   function getStyle (index: number) {
     return index === value ? {color: COLORS.dark} : {color: COLORS.text}
   }
@@ -52,6 +54,13 @@ const Experiences = () => {
   const selfIntro = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 
   return (
+    <VizSensor
+    partialVisibility
+            onChange={(isVisible: any) => {
+                setVisible(isVisible);
+            }}
+        >
+    <Fade in={visible} timeout={1000}>
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} 
@@ -80,6 +89,8 @@ const Experiences = () => {
         Item Three
       </TabPanel>
     </Box>
+    </Fade>
+    </VizSensor>
   );
 }
 export default Experiences

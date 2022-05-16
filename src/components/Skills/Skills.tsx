@@ -7,12 +7,23 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { Paper } from "@mui/material";
 import CloudTags from "./CloudTags/CloudTags";
-
+import { Fade } from '@mui/material';
+import VizSensor from 'react-visibility-sensor';
 const Skills = () => {
-   return (
+  const [visible, setVisible] = useState(false);
+  return (
+    <VizSensor
+    partialVisibility
+            onChange={(isVisible: any) => {
+                setVisible(isVisible);
+            }}
+        >
+    <Fade in={visible} timeout={1000}>
     <Box sx={{ display: 'flex' }}>
                 <CloudTags/>
             </Box>
+    </Fade>
+    </VizSensor>
     
   );
 };

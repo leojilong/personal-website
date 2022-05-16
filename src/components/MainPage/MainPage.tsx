@@ -1,3 +1,4 @@
+import React, { useEffect, useRef, useState } from "react";
 import AboutMe from '../AboutMe/AboutMe';
 import TopBar from '../TopBar/TopBar';
 import MyDivider from '../MyDivider/MyDivider';
@@ -10,11 +11,13 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from '../../style/theme';
 import Contact from '../Contact/Contact';
+import './MainPage.css'
 
 const MainPage = () => {
-
+  
   return (
       <>
+      
     <ThemeProvider theme={theme}>
       <CssBaseline /> 
     <TopBar/>
@@ -35,9 +38,9 @@ const MainPage = () => {
             <Skills />
           </Grid>
           <Grid item xs={12} >
-            {/* <div id="Experiences"> */}
+            <div id="Experiences">
             <MyDivider text="Experiences"/>
-            {/* </div> */}
+            </div>
           </Grid>
           <Grid item xs={12} >
             <Experiences/>
@@ -63,7 +66,7 @@ const MainPage = () => {
             <Project title="tt" content="asd"/>
           </Grid>
           <Grid item xs={12} >
-            <div id="Contacts">
+            <div id="Contact">
             <MyDivider text="Contact Me" />
             </div>
           </Grid>
@@ -74,7 +77,7 @@ const MainPage = () => {
         
     </Container>
     </ThemeProvider>
-    
+
     </>
   );
 };
