@@ -6,7 +6,12 @@ import Experiences from '../Experiences/Expereinces';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Skills from '../Skills/Skills';
-import Project from '../Project/Project';
+import BluBookProject from '../Project/BluBookProject';
+import CentivizerProject from '../Project/CentivizerProject';
+import FluidProject from '../Project/FluidProject';
+import FrontierProject from '../Project/FrontierProject';
+import HuyaProject from '../Project/HuyaProject';
+import DistributedProject from '../Project/DistributedProject';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from '../../style/theme';
@@ -50,21 +55,25 @@ const MainPage = () => {
             <MyDivider text="Projects" />
             </div>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Project title="tt" content="asd"/>
+          <Grid item xs={12} md={6} >
+            <CentivizerProject />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Project title="tt" content="asd"/>
+          <Grid item xs={12} md={6} >
+            <DistributedProject />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Project title="tt" content="asd"/>
+          <Grid item xs={12} md={6}>
+            <FrontierProject  />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Project title="tt" content="asd"/>
+          <Grid item xs={12} md={6}>
+            <HuyaProject />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Project title="tt" content="asd"/>
+          <Grid item xs={12} md={6} >
+            <BluBookProject />
           </Grid>
+          <Grid item xs={12} md={6} >
+            <FluidProject  />
+          </Grid>
+         
           <Grid item xs={12} >
             <div id="Contact">
             <MyDivider text="Contact Me" />

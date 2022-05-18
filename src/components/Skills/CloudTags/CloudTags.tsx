@@ -1,5 +1,5 @@
 import React from 'react'
-import {Cloud, renderSimpleIcon} from 'react-icon-cloud'
+import {Cloud, renderSimpleIcon, ICloud} from 'react-icon-cloud'
 
 import { siJava, siJavascript, siPython, siHtml5, siCss3, 
     siTypescript, siPostgresql, siMongodb, siReact, siRedux, 
@@ -51,6 +51,30 @@ const handleClickTags = (e: any, url: any) => {
     // e.preventDefault()
     window.open(url, "_blank")
 }
+const cloudProps: Omit<ICloud, 'children'> = {
+  id: 'stable-id-for-csr-ssr',
+  containerProps: {
+    style: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      // marginLeft: Const.pad * 2,
+      // marginRight: Const.pad * 2,
+    },
+  },
+  options: {
+    reverse: true,
+    depth: 1,
+    wheelZoom: false,
+    imageScale: 2,
+    activeCursor: 'default',
+    tooltip: 'native',
+    initial: [0.1, -0.1],
+    clickToFront: 500,
+    tooltipDelay: 0,
+    outlineColour: '#0000',
+  },
+}
 const icons = skills.map((skill) => {
   return renderSimpleIcon({
     icon: skill.name,
@@ -62,7 +86,7 @@ const icons = skills.map((skill) => {
 })
 
 const CloudTags = () => {
-  return <Cloud>
+  return <Cloud {...cloudProps}>
     {icons}
     <a href="https://expressjs.com/" color="white">Express</a>
     <a href="https://zookeeper.apache.org/" >Apache ZooKeeper</a>

@@ -51,8 +51,6 @@ const Experiences = () => {
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
-  const selfIntro = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-
   return (
     <VizSensor
     partialVisibility
@@ -79,14 +77,30 @@ const Experiences = () => {
           <Typography variant="h4">University of Toronto</Typography>
         </Link>
         <Typography color={COLORS.dark}>Sep 2018 - Dec 2022</Typography>
-        {selfIntro}
+        <Typography >St. George Campus, Toronto, ON</Typography>
+        <Typography >•	Bachelor of Science, Specialist in Computer Science and Minor in Statistics</Typography>
+        •	Member of University of Toronto Game Design Club and University of Toronto Application Development Association
         
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+      <Link href="https://ir.huya.com/index.php?s=64" underline="hover" color={COLORS.dark}>
+          <Typography variant="h4">Huya Inc.</Typography>
+        </Link>
+      <Typography color={COLORS.dark}>Jun 2021 - Sep 2021</Typography>
+        <Typography >Guangzhou, China</Typography>
+        <Typography >•	Designed and built dynamic and browser compatible web pages using React with Hooks</Typography>
+        <Typography >•	Deliver engaging user experience by optimized loading speed and performance of web pages</Typography>
+        <Typography >•	Cooperated with other back-end developers and product managers to build, improve, and test new features for web products</Typography>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+      <Link href="https://www.centivizer.com/" underline="hover" color={COLORS.dark}>
+          <Typography variant="h4">Centivizer</Typography>
+        </Link>
+      <Typography color={COLORS.dark}>May 2022 - Sep 2022</Typography>
+        <Typography >Toronto, ON</Typography>
+        <Typography >•	Designed and built dynamic and browser compatible web pages using React with Hooks</Typography>
+        <Typography >•	Deliver engaging user experience by optimized loading speed and performance of web pages</Typography>
+        <Typography >•	Cooperated with a huge team (20+ people involved) to build, improve, and test for products</Typography>
       </TabPanel>
     </Box>
     </Fade>

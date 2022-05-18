@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import MusicOffIcon from '@mui/icons-material/MusicOff';
 import Link from '@mui/material/Link';
-
+import { COLORS } from '../../style/colors';
 
 const pages = ['About', 'Experiences', 'Projects', 'Contact'];
 
@@ -48,11 +48,11 @@ const TopBar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
-            color='textPrimary'
             variant="h6"
             noWrap
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            color={COLORS.dark}
           >
             Long (Leo) Ji
           </Typography>
@@ -64,7 +64,7 @@ const TopBar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="secondary"
             >
               <MenuIcon />
             </IconButton>
@@ -83,14 +83,14 @@ const TopBar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', md: 'none' }
               }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} 
-                onClick={handleCloseNavMenu} 
+                onClick={() => handleAnchor(page)} 
                 >
-                  <Typography color='textPrimary'textAlign="center">{page}</Typography>
+                  <Typography color={COLORS.bold} textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
               
@@ -104,6 +104,7 @@ const TopBar = () => {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            color={COLORS.dark}
           >
             Long (Leo) Ji
           </Typography>

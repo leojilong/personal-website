@@ -2,6 +2,7 @@ import { createTheme } from '@mui/material/styles';
 import { COLORS } from './colors';
 
 export const theme = createTheme({
+  
   components: {
     MuiCssBaseline: {
       styleOverrides: {
@@ -24,5 +25,6 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: 'VT323',
-  }
+  },
+  
 });

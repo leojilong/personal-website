@@ -16,8 +16,9 @@ import VizSensor from 'react-visibility-sensor';
 
 const AboutMe = () => {
   const [visible, setVisible] = useState(false);
-  const selfIntro = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-
+  const selfIntro = "I am a software developer located in Canada. I have a huge passion for full-stack development, system design, and building fast and reliable applications."
+  const person = "Detail-oriented person, problem solver, independent worker with strong communication and presentation skills. Fan of Lo-fi, Rock Music, Esports, Anime, Talk Show, and Variety Show. Used to be an active member of the school Swimming team for 6 years, Tennis team for 3 years, and Royal Canadian Air Cadets for 5 years."
+  const interest = "Interested in new technologies, FinTech, and Web 3.0"
   return (
     <VizSensor
     partialVisibility
@@ -27,9 +28,15 @@ const AboutMe = () => {
         >
     <Fade in={visible} timeout={1000}>
     <Box sx={{ flexDirection: 'column'}} >
-      <Typography variant="h4">Hi, I'm Leo!</Typography>
-      <Typography>
+      <Typography variant="h4" color={COLORS.dark}>Hi, I'm Leo!</Typography>
+      <Typography variant="inherit">
       {selfIntro}
+      </Typography>
+      <Typography variant="inherit">
+      {person}
+      </Typography>
+      <Typography variant="inherit">
+      {interest}
       </Typography>
       <Box sx={{ display: { xs: 'none', md: 'flex' }}}>
         <img src={logo} width="471" height="265" style={{borderRadius: 15, marginTop: 20}}/>
