@@ -15,6 +15,7 @@ import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import MusicOffIcon from '@mui/icons-material/MusicOff';
 import Link from '@mui/material/Link';
 import { COLORS } from '../../style/colors';
+import Player from "../Music/Music";
 
 const pages = ['About', 'Experiences', 'Projects', 'Contact'];
 
@@ -125,11 +126,9 @@ const TopBar = () => {
             ))}
           </Box>
 
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <IconButton onClick={toggleMusic} sx={{ p: 0 }}>
-              {musicStatus ? <MusicNoteIcon /> : <MusicOffIcon /> }
-            </IconButton>
-          </Box> */}
+          <Box sx={{ flexGrow: 0 }}>
+            <Player/>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>

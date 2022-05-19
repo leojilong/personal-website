@@ -8,11 +8,11 @@ import { Paper } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import MyDivider from '../MyDivider/MyDivider';
 import { COLORS } from '../../style/colors';
-import { Link } from '@mui/material';
 import logo from '../../lofi_avatar.png';
 import './AboutMe.css';
 import { Fade } from '@mui/material';
 import VizSensor from 'react-visibility-sensor';
+import Link from '@mui/material/Link';
 
 const AboutMe = () => {
   const [visible, setVisible] = useState(false);
@@ -28,7 +28,9 @@ const AboutMe = () => {
         >
     <Fade in={visible} timeout={1000}>
     <Box sx={{ flexDirection: 'column'}} >
-      <Typography variant="h4" color={COLORS.dark}>Hi, I'm Leo!</Typography>
+      <Link href="https://drive.google.com/file/d/13t73Fa1MrulRbimaJudHk7esEQFQw447/view?usp=sharing" underline="hover" color={COLORS.dark}>
+        <Typography variant="h4" >Hi, I'm Leo!</Typography>
+      </Link>
       <Typography variant="inherit">
       {selfIntro}
       </Typography>
