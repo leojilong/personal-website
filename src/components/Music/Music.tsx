@@ -5,7 +5,7 @@ import MusicOffIcon from '@mui/icons-material/MusicOff';
 import bgm from '../../music.mp3';
 
 const Player = () => {
-    const [audio] = useState(new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"));
+    const [audio] = useState(new Audio(bgm));
     const [musicStatus, setMusicStatus] = useState<boolean>(false); // can't auto play due to browser auto play policy
     const toggleMusic = (event: React.MouseEvent<HTMLElement>) => {
         setMusicStatus(!musicStatus);
