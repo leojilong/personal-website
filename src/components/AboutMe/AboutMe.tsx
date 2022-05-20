@@ -34,9 +34,11 @@ const AboutMe = () => {
       <Typography variant="inherit">
       {selfIntro}
       </Typography>
+      <br/>
       <Typography variant="inherit">
       {person}
       </Typography>
+      <br/>
       <Typography variant="inherit">
       {interest}
       </Typography>
