@@ -8,7 +8,7 @@ import { Paper } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import MyDivider from '../MyDivider/MyDivider';
 import { COLORS } from '../../style/colors';
-import logo from '../../lofi_avatar.png';
+import logo from '../../static/lofi_avatar.png';
 import './AboutMe.css';
 import { Fade } from '@mui/material';
 import VizSensor from 'react-visibility-sensor';

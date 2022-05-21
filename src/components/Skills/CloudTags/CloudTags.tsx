@@ -47,10 +47,10 @@ const skills = [js, java, python, html, css, ts, psql, mdb,
     rct, red, vue, node, ionic, sass, lodash, maven, sb, npm, 
     yarn, git, cap, postm, ant, rkt, hsk, antd, mui, heroku, 
     aws, sqlize, mysql, redis, socketio]
-const handleClickTags = (e: any, url: any) => {
-    // e.preventDefault()
-    window.open(url, "_blank")
-}
+// const handleClickTags = (e: any, url: any) => {
+//     e.preventDefault()
+//     window.open(url, "_blank")
+// }
 const cloudProps: Omit<ICloud, 'children'> = {
   id: 'stable-id-for-csr-ssr',
   containerProps: {
@@ -58,8 +58,6 @@ const cloudProps: Omit<ICloud, 'children'> = {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      // marginLeft: Const.pad * 2,
-      // marginRight: Const.pad * 2,
     },
   },
   options: {
@@ -80,7 +78,11 @@ const icons = skills.map((skill) => {
     icon: skill.name,
     size: 42,
     aProps: {
-      onClick: (e: any) => handleClickTags(e, skill.url)
+      href: '#',
+        onClick: (e) => {
+          e.preventDefault()
+        },
+      // onClick: (e: any) => handleClickTags(e, skill.url)
     }
   })
 })
@@ -88,8 +90,8 @@ const icons = skills.map((skill) => {
 const CloudTags = () => {
   return <Cloud {...cloudProps}>
     {icons}
-    <a href="https://expressjs.com/" color="white">Express</a>
-    <a href="https://zookeeper.apache.org/" >Apache ZooKeeper</a>
+    <a href="#" color="white">Express</a>
+    <a href="#" >Apache ZooKeeper</a>
     
    
   </Cloud>
