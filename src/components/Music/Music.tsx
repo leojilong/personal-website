@@ -27,9 +27,10 @@ const Player = () => {
 
     return (
         <>
-            <IconButton onClick={toggleMusic} sx={{ p: 0 }}>
+        <audio id="loop-limited" controls style={{width: 100, height:20}}><source src="../../music.mp3" type="audio/mpeg" /></audio>
+            {/* <IconButton onClick={toggleMusic} sx={{ p: 0 }}>
                 {musicStatus ? <MusicNoteIcon /> : <MusicOffIcon /> }
-                </IconButton>
+                </IconButton> */}
         </>
     );
 };
