@@ -8,12 +8,21 @@ import Typography from '@mui/material/Typography';
 import { Fade } from '@mui/material';
 import VizSensor from 'react-visibility-sensor';
 import { COLORS } from "../../style/colors";
-
+import HuyaModal from "./HuyaModal";
 
 
 const CentivizerProject = () => {
   const [visible, setVisible] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const handleOpen = () => {
+    setOpenModal(true);
+  }
+  const handleClose = () => {
+    setOpenModal(false);
+  }
   return (
+    <>
+    <HuyaModal isOpen={openModal} handleClose={handleClose}/>
     <VizSensor
     partialVisibility
           onChange={(isVisible: any) => {
@@ -29,16 +38,17 @@ const CentivizerProject = () => {
       minWidth: 275
     }}
     style={{backgroundColor: COLORS.bold}}
+    onClick={handleOpen}
   >
     <CardContent>
       <Typography variant="h5" component="div" color={COLORS.dark}>
-        Exercise Game
+        Exercise and Cognitive Game
       </Typography>
       <Typography >
-        •	Toronto, ON (May 2022 - Sep 2022)
+        •	Toronto, ON (May 2022 - Present)
       </Typography>
       <Typography >
-        •	Distributed System Project
+        •	Progressive Web Application
       </Typography>
       <Typography color={COLORS.dark}>
         •	Express, Sequelize, MySQL, Redis
@@ -48,6 +58,7 @@ const CentivizerProject = () => {
     </Card>
     </Fade>
   </VizSensor>
+  </>
   );
 };
 export default CentivizerProject

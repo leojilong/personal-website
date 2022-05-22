@@ -8,12 +8,21 @@ import Typography from '@mui/material/Typography';
 import { Fade } from '@mui/material';
 import VizSensor from 'react-visibility-sensor';
 import { COLORS } from "../../style/colors";
-
+import HuyaModal from "./HuyaModal";
 
 
 const HuyaProject = () => {
   const [visible, setVisible] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const handleOpen = () => {
+    setOpenModal(true);
+  }
+  const handleClose = () => {
+    setOpenModal(false);
+  }
   return (
+    <>
+    <HuyaModal isOpen={openModal} handleClose={handleClose}/>
     <VizSensor
     partialVisibility
           onChange={(isVisible: any) => {
@@ -29,6 +38,7 @@ const HuyaProject = () => {
       minWidth: 275
     }}
     style={{backgroundColor: COLORS.bold}}
+    onClick={handleOpen}
   >
     <CardContent>
       <Typography variant="h5" component="div" color={COLORS.dark}>
@@ -48,6 +58,7 @@ const HuyaProject = () => {
     </Card>
     </Fade>
   </VizSensor>
+  </>
   );
 };
 export default HuyaProject

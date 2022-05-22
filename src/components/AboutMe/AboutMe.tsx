@@ -28,7 +28,7 @@ const AboutMe = () => {
         >
     <Fade in={visible} timeout={1000}>
     <Box sx={{ flexDirection: 'column'}} >
-      <Link href="https://drive.google.com/file/d/13t73Fa1MrulRbimaJudHk7esEQFQw447/view?usp=sharing" underline="hover" color={COLORS.dark}>
+      <Link href="https://docs.google.com/document/d/1YcPzcf5JXFOUxC4HddXeV6NwunMNQPiJ/edit?usp=sharing&ouid=109976699635638579701&rtpof=true&sd=true" underline="hover" color={COLORS.dark}>
         <Typography variant="h4" >Hi, I'm Leo!</Typography>
       </Link>
       <Typography variant="inherit">

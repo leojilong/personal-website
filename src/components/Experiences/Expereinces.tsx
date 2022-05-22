@@ -97,11 +97,11 @@ const Experiences = () => {
       <Link href="https://www.centivizer.com/" underline="hover" color={COLORS.dark}>
           <Typography variant="h4">Centivizer</Typography>
         </Link>
-      <Typography color={COLORS.dark}>May 2022 - Sep 2022</Typography>
+      <Typography color={COLORS.dark}>May 2022 - Present</Typography>
         <Typography >Toronto, ON</Typography>
-        <Typography >•	Designed and built dynamic and browser compatible web pages using React with Hooks</Typography>
-        <Typography >•	Deliver engaging user experience by optimized loading speed and performance of web pages</Typography>
-        <Typography >•	Cooperated with a huge team (20+ people involved) to build, improve, and test for products</Typography>
+        <Typography >•	Manage dataBase and backend server using MySQL</Typography>
+        <Typography >•	Designed and implemented REST Api using Express and Sequelize</Typography>
+        <Typography >•	Cooperated with a large team (20+ people involved) to build, improve, and test for products</Typography>
       </TabPanel>
     </Box>
     </Fade>
