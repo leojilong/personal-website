@@ -8,21 +8,13 @@ import Typography from '@mui/material/Typography';
 import { Fade } from '@mui/material';
 import VizSensor from 'react-visibility-sensor';
 import { COLORS } from "../../style/colors";
-import HuyaModal from "./HuyaModal";
+import Link from '@mui/material/Link';
 
 
 const FrontierProject = () => {
   const [visible, setVisible] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
-  const handleOpen = () => {
-    setOpenModal(true);
-  }
-  const handleClose = () => {
-    setOpenModal(false);
-  }
   return (
     <>
-    <HuyaModal isOpen={openModal} handleClose={handleClose}/>
     <VizSensor
     partialVisibility
           onChange={(isVisible: any) => {
@@ -30,6 +22,7 @@ const FrontierProject = () => {
           }}
       >
     <Fade in={visible} timeout={1000}>
+    <Link href="https://docs.google.com/document/d/1B12tkRdZQ7HUkJEZ-wx-BYcSh0iiC73skMph5dWVH-Y/edit">
     <Card
     sx={{
       '&:hover': {
@@ -38,7 +31,6 @@ const FrontierProject = () => {
       minWidth: 275
     }}
     style={{backgroundColor: COLORS.bold}}
-    onClick={handleOpen}
   >
     <CardContent>
       <Typography variant="h5" component="div" color={COLORS.dark}>
@@ -56,6 +48,7 @@ const FrontierProject = () => {
      
     </CardContent>
     </Card>
+    </Link>
     </Fade>
   </VizSensor>
   </>

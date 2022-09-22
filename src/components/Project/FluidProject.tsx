@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { Fade } from '@mui/material';
 import VizSensor from 'react-visibility-sensor';
 import { COLORS } from "../../style/colors";
-import HuyaModal from "./HuyaModal";
+import Link from '@mui/material/Link';
 
 
 const FluidProject = () => {
@@ -22,7 +22,6 @@ const FluidProject = () => {
   }
   return (
     <>
-    <HuyaModal isOpen={openModal} handleClose={handleClose}/>
     <VizSensor
     partialVisibility
           onChange={(isVisible: any) => {
@@ -30,6 +29,7 @@ const FluidProject = () => {
           }}
       >
     <Fade in={visible} timeout={1000}>
+    <Link href="https://drive.google.com/file/d/1DJUUISw9OFjaij-QWgCgV4xblCBezSy4/view?usp=sharing">
     <Card
     sx={{
       '&:hover': {
@@ -56,6 +56,7 @@ const FluidProject = () => {
      
     </CardContent>
     </Card>
+    </Link>
     </Fade>
   </VizSensor>
   </>

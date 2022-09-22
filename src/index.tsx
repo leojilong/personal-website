@@ -3,13 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import MainPage from './components/MainPage/MainPage';
 import reportWebVitals from './reportWebVitals';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <MainPage />
+    <BrowserRouter>
+      <Routes>
+          <Route path="/" element={<MainPage />}>
+          <Route path="huya" element={<MainPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    
   </React.StrictMode>
 );
 

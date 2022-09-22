@@ -77,7 +77,7 @@ const Experiences = () => {
         <Link href="https://www.utoronto.ca/" underline="hover" color={COLORS.dark}>
           <Typography variant="h4">University of Toronto</Typography>
         </Link>
-        <Typography color={COLORS.dark}>Sep 2018 - Dec 2022</Typography>
+        <Typography color={COLORS.dark}>Sep 2018 - May 2023</Typography>
         <Typography >St. George Campus, Toronto, ON</Typography>
         <Typography >•	Bachelor of Science, Specialist in Computer Science and Minor in Statistics</Typography>
         •	Member of University of Toronto Game Design Club and University of Toronto Application Development Association
@@ -89,7 +89,7 @@ const Experiences = () => {
         </Link>
       <Typography color={COLORS.dark}>Jun 2021 - Sep 2021</Typography>
         <Typography >Guangzhou, China</Typography>
-        <Typography >•	Designed and built dynamic and browser compatible web pages using React with Hooks</Typography>
+        <Typography >•	Maintained a data labeling platform with 1000+ active users and process 1.02M labeling data per month</Typography>
         <Typography >•	Deliver engaging user experience by optimized loading speed and performance of web pages</Typography>
         <Typography >•	Cooperated with other back-end developers and product managers to build, improve, and test new features for web products</Typography>
       </TabPanel>
@@ -97,11 +97,11 @@ const Experiences = () => {
       <Link href="https://www.centivizer.com/" underline="hover" color={COLORS.dark}>
           <Typography variant="h4">Centivizer</Typography>
         </Link>
-      <Typography color={COLORS.dark}>May 2022 - Present</Typography>
+      <Typography color={COLORS.dark}>May 2022 - Sep 2022</Typography>
         <Typography >Toronto, ON</Typography>
-        <Typography >•	Manage dataBase and backend server using MySQL</Typography>
-        <Typography >•	Designed and implemented REST Api using Express and Sequelize</Typography>
-        <Typography >•	Cooperated with a large team (20+ people involved) to build, improve, and test for products</Typography>
+        <Typography >•	Manage database with 120+ tables and backend server of two cognitive games and user dashboards</Typography>
+        <Typography >•	Implemented JWT token-based authentication for REST API, improve performance by 85%</Typography>
+        <Typography >•	Set up remote develop environment and manual doc, increases onboarding and develop efficiency by 90%</Typography>
       </TabPanel>
     </Box>
     </Fade>
