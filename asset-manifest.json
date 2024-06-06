@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.ab823314.css",
-    "main.js": "/static/js/main.32b10cb5.js",
-    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "static/media/lofi_avatar.png": "/static/media/lofi_avatar.7ecae08349cc8b5f104f.png",
-    "index.html": "/index.html",
-    "main.ab823314.css.map": "/static/css/main.ab823314.css.map",
-    "main.32b10cb5.js.map": "/static/js/main.32b10cb5.js.map",
-    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/personal-website/static/css/main.ab823314.css",
+    "main.js": "/personal-website/static/js/main.b12c018d.js",
+    "static/js/787.28cb0dcd.chunk.js": "/personal-website/static/js/787.28cb0dcd.chunk.js",
+    "static/media/lofi_avatar.png": "/personal-website/static/media/lofi_avatar.7ecae08349cc8b5f104f.png",
+    "index.html": "/personal-website/index.html",
+    "main.ab823314.css.map": "/personal-website/static/css/main.ab823314.css.map",
+    "main.b12c018d.js.map": "/personal-website/static/js/main.b12c018d.js.map",
+    "787.28cb0dcd.chunk.js.map": "/personal-website/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ab823314.css",
-    "static/js/main.32b10cb5.js"
+    "static/js/main.b12c018d.js"
   ]
 }
